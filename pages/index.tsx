@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
+import classNames from 'classnames'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -111,7 +112,8 @@ export default function Home() {
             <h2 className={inter.className}>
               Deploy <span>-&gt;</span>
             </h2>
-            <p className={inter.className}>
+            <p 
+              className={classNames( inter.className, 'font-bold' )}>
               Instantly deploy your Next.js site to a shareable URL
               with&nbsp;Vercel.
             </p>
