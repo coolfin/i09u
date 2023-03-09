@@ -1,27 +1,22 @@
 
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-
-import styles from '@/styles/Home.module.css'
+import { Container } from '@/components/Container'
 
 import classNames from 'classnames'
-import { Tabs, Text } from '@geist-ui/core'
+import { Text } from '@geist-ui/core'
 
-const inter = Inter({ subsets: ['latin'] })
-
+//처음 라우팅 안됐을 때 보여줄 페이지
 export default function Home() {
   return (
-    <>asd
+    <Container
+      className={classNames(
+        'w-full', 'h-full', 'bg-slate-500'
+      )}
+    >
 
-      {/* <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              /> */}
+      <Text
+        className={classNames('font-bold')}
+      >안녕하세요, 서흥공구입니다</Text>
 
-    </>
+    </Container>
   )
 }
