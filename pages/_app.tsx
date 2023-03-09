@@ -1,12 +1,23 @@
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
+import { GlobalNav } from '@/components/GlobalNav'
 
 import { GeistProvider, CssBaseline } from '@geist-ui/core'
+import { AppPropsWithLayout } from '@/@types/next'
+import React from 'react'
 
 
 //페이지 적용 공통 레이아웃
-export default function App({ Component, pageProps }: AppProps) {
+
+//<Router, Props>
+// P : props, T: type 
+//ReactNode 타입은 jsx 내에서 사용할 수 있는 모든 요소의 타입
+
+
+export default function App({ Component, pageProps }: AppPropsWithLayout) {
+  //optional chaining ?? : null , undefined일때 >>로  -> null, undefined를 포함하기때문에
+  const getLayout = Component.getLayout ??  ((page : React.ReactNode) => <><GlobalNav/>{page}</>);
   return (
     <>
     <Head>
@@ -16,14 +27,17 @@ export default function App({ Component, pageProps }: AppProps) {
       <title>서흥공구</title>
       <link rel="icon" href="/favicon.ico" />
 
-      <meta name='keywords' content='i09u sh09 서흥공구 서흥' />
-      <meta name='author' content='coolfin' />
+      <meta name='author' content='박 상우' />
       <meta name='title' content='서흥공구' />
-      <meta name='description' content='서흥공구 회사 소개 페이지'/>
+      <meta name='og:title' content='서흥공구' />
+      <meta name='description' content='서흥공구 회사의 소개 페이지입니다'/>
+      <meta name='og:description' content='서흥공구 회사의 소개 페이지입니다'/>
+      {/* <meta name='og:url' content='https://sh09.com' /> */}
+
     </Head>
   <GeistProvider>
     <CssBaseline />
-    <Component {...pageProps} />
+    {getLayout(<Component {...pageProps} />)}
   </GeistProvider>
     </>
   )
