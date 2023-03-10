@@ -11,16 +11,17 @@ export const ForienToggle = () => {
                 'max-w-full w-fit',
                 'flex',
                 'items-center',
+                'font-extralight',
             )}>
-            <div className={classNames({'opacity-50' : router.pathname ==='/en'}, 'mx-3')}>kr</div>
+            <div className={classNames({'opacity-40' : router.pathname ==='/en'}, 'mx-3')}>kr</div>
             <Toggle 
             type="secondary"
             initialChecked = {router.pathname === "/en" ? true : false}
             onChange={(e) => {
                 e.preventDefault();
-                router.push(e.target.checked ? '/en' : '/')
+                {e.target.checked ? router.push('/en') : router.back()}
             }} />
-            <div className={classNames({'opacity-60' : router.pathname ==='/'}, 'mx-3')}>en</div>
+            <div className={classNames({'opacity-40' : router.pathname ==='/'}, 'mx-3')}>en</div>
         </label>
     )
 }

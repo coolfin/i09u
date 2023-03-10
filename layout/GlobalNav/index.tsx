@@ -26,13 +26,23 @@ export const GlobalNav = () => {
                 'flex-wrap',
                 'gap-y-3',
             )}>
-                <Link
-                    href="/"
-                    className={classNames(
-                        'text-white',
-                        'font-bold',
-                        'text-xl',
-                    )}>서흥공구</Link>
+                <div className={classNames(
+                    'flex',
+                    'justify-between',
+                    'items-center',
+                    'gap-x-3'
+                )}>
+                    <Link
+                        href="/"
+                        className={classNames(
+                            'text-white',
+                            'font-bold',
+                            'text-xl',
+                        )}>
+
+                        {router.pathname === '/en' ? 'Seoheung' : '서흥공구'}
+                    </Link>
+                </div>
 
                 <Tabs
                     value={activeTab}
@@ -45,14 +55,15 @@ export const GlobalNav = () => {
                     onChange={(v) => {
                         router.push(v)
                     }}>
-                    <Tabs.Item label="회사소개" value='/info' />
-                    <Tabs.Item label="협력업체" value='/together' />
-                    <Tabs.Item label="고객센터" value='/help' />
-                    <Tabs.Item label="사원" value='/people' />
+                    <Tabs.Item label={router.pathname === '/en' ? 'About' : "회사소개"} value='/info' />
+                    <Tabs.Item label={router.pathname === '/en' ? 'Cooperate' : "협력업체"} value='/together' />
+                    <Tabs.Item label={router.pathname === '/en' ? 'Help' : "고객센터"} value='/help' />
+                    <Tabs.Item label={router.pathname === '/en' ? 'People' : "사원"} value='/people' />
                 </Tabs>
 
-                <ForienToggle />
+                {(router.pathname === '/en' || router.pathname === '/') && <ForienToggle />}
             </div>
+
         </BaseContainer>
     )
 }
