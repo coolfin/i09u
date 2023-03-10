@@ -9,7 +9,11 @@ export default function Home() {
   return (
     <Container
       className={classNames(
+<<<<<<< Updated upstream
         'w-full', 'h-full', 'bg-slate-500'
+=======
+        'w-full', 'h-full',
+>>>>>>> Stashed changes
       )}
     >
 

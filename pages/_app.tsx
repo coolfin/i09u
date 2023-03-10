@@ -37,7 +37,7 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
         {/* <meta name='og:url' content='https://sh09.com' /> */}
 
       </Head>
-      <GeistProvider>
+      <GeistProvider themeType='dark'>
         <CssBaseline />
         {getLayout(<Component {...pageProps} />)}
       </GeistProvider>
