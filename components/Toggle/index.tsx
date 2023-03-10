@@ -12,7 +12,7 @@ export const ForienToggle = () => {
                 'flex',
                 'items-center',
             )}>
-            <div className={classNames('leading-none')}>kr</div>
+            <div className={classNames({'opacity-50' : router.pathname ==='/en'}, 'mx-3')}>kr</div>
             <Toggle 
             type="secondary"
             initialChecked = {router.pathname === "/en" ? true : false}
@@ -20,7 +20,7 @@ export const ForienToggle = () => {
                 e.preventDefault();
                 router.push(e.target.checked ? '/en' : '/')
             }} />
-            <div className={classNames('leading-none')}>en</div>
+            <div className={classNames({'opacity-60' : router.pathname ==='/'}, 'mx-3')}>en</div>
         </label>
     )
 }

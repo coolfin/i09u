@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 import { Container as BaseContainer } from '@/components/Container';
+import { ForienToggle } from '@/components/Toggle';
 
 export const GlobalNav = () => {
     const router = useRouter();
@@ -37,8 +38,6 @@ export const GlobalNav = () => {
                     value={activeTab}
                     hideDivider
 
-                    marginRight="5rem"
-                    
                     className={classNames(
                         'max-w-full w-fit',
                         'flex',
@@ -51,6 +50,8 @@ export const GlobalNav = () => {
                     <Tabs.Item label="고객센터" value='/help' />
                     <Tabs.Item label="사원" value='/people' />
                 </Tabs>
+
+                <ForienToggle />
             </div>
         </BaseContainer>
     )
