@@ -1,10 +1,11 @@
-import styled from '@emotion/styled';
-import { Tabs, Text } from '@geist-ui/core'
+import { Tabs } from '@geist-ui/core'
 import classNames from 'classnames';
+
 import { useRouter } from 'next/router'
-import { useEffect, useState } from 'react';
-import { Container as BaseContainer } from '@/components/Container';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
+
+import { Container as BaseContainer } from '@/components/Container';
 
 export const GlobalNav = () => {
     const router = useRouter();
@@ -24,23 +25,23 @@ export const GlobalNav = () => {
                 'flex-wrap',
                 'gap-y-3',
             )}>
-                <Link 
-                href="/"
-                className={classNames(
-                    'text-white',
-                    'font-bold',
-                    'text-xl',
-                )}>서흥공구</Link>
+                <Link
+                    href="/"
+                    className={classNames(
+                        'text-white',
+                        'font-bold',
+                        'text-xl',
+                    )}>서흥공구</Link>
+
                 <Tabs
                     value={activeTab}
                     hideDivider
+
+                    marginRight="5rem"
+                    
                     className={classNames(
-                        'max-w-full',
-                        'w-fit',
+                        'max-w-full w-fit',
                         'flex',
-                        'justify-between',
-                        'items-center',
-                        'flex-wrap',
                     )}
                     onChange={(v) => {
                         router.push(v)
