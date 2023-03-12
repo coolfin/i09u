@@ -14,6 +14,10 @@ export default function Home() {
       'items-center',
       'justify-between',
       'mt-40',
+
+      'sm:flex-col',
+      'md:flex-col',
+      'lg:flex-row',
     )}>
       {/* 좌측 텍스트 우측 이미지 */}
       <div className={classNames(

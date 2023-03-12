@@ -47,7 +47,9 @@ export default function Home() {
         <Image
           className={classNames(
             'rounded-full',
-            'py-12',
+
+            'shadow-xl',
+            'shadow-gray-500',
           )}
           src="/images/company.png"
           alt="company img"
