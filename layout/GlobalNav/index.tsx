@@ -11,9 +11,12 @@ import { ForienToggle } from '@/components/Toggle';
 export const GlobalNav = () => {
     const router = useRouter();
     const [activeTab, setActiveTab] = useState<string>(router.pathname);
+    const [iseng, setIsEng] = useState('/');
 
     useEffect(() => {
         setActiveTab(router.pathname)
+
+        setIsEng(router.pathname==='/en' ? '/en' : '/')
     }, [router.pathname])
 
     return (
@@ -33,7 +36,7 @@ export const GlobalNav = () => {
                     'gap-x-3'
                 )}>
                     <Link
-                        href="/"
+                        href={iseng}
                         className={classNames(
                             'text-white',
                             'font-bold',

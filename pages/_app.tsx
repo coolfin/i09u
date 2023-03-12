@@ -7,6 +7,7 @@ import { GeistProvider, CssBaseline } from '@geist-ui/core'
 import { AppPropsWithLayout } from '@/@types/next'
 import React from 'react'
 import { Container } from '@/components/Container'
+import { GlobalFooter } from '@/layout/GlobalFooter'
 
 
 //페이지 적용 공통 레이아웃
@@ -19,7 +20,7 @@ import { Container } from '@/components/Container'
 export default function App({ Component, pageProps }: AppPropsWithLayout) {
   //optional chaining ?? : null , undefined일때 >>로  -> null, undefined를 포함하기때문에
   //getLayout은 Component의 타입인 AppPropsWithLayout의 NextPageWithLayout의 getLayout에 의해 가능 
-  const getLayout = Component.getLayout ?? ((page: React.ReactNode) => <><GlobalNav />{page}</>);
+  const getLayout = Component.getLayout ?? ((page: React.ReactNode) => <><GlobalNav />{page}<GlobalFooter/></>);
   return (
     <>
       <Head>
