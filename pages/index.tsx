@@ -14,9 +14,10 @@ export default function Home() {
       'justify-between',
       'mt-40',
 
-      'lg:flex-row',
-      'md:flex-col',
       'sm:flex-col',
+      'md:flex-col',
+      'lg:flex-row',
+      
 
     )}>
       {/* 좌측 텍스트 우측 이미지 */}
