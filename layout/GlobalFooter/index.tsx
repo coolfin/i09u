@@ -5,6 +5,7 @@ import { useRouter } from "next/router"
 export const GlobalFooter = () => {
     const router = useRouter();
     return (
+        
         <Container className={classNames(
             'flex',
             'flex-col',
@@ -14,7 +15,7 @@ export const GlobalFooter = () => {
 
             'text-xs',
 
-            'my-16',
+            'mt-48',
         )}>
             <h5 className={classNames(
                 'text-white'
@@ -26,8 +27,8 @@ export const GlobalFooter = () => {
                 'flex',
                 'flex-col',
                 'gap-y-2',
-                
-                'font-light'
+                'text-gray-500',
+                'font-normal',
             )}>
                 <span>
                     {router.pathname === '/en' ? 'TEL:' : '대표전화:'} <a href="tel:031-351-5509">031-351-5509</a>

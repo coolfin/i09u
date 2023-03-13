@@ -12,7 +12,7 @@ export default function Home() {
       'flex',
       'items-center',
       'justify-between',
-      'mt-40',
+      'mt-32',
 
       'sm:flex-col',
       'md:flex-col',
@@ -25,7 +25,16 @@ export default function Home() {
         'flex',
         'flex-col',
         'justify-center',
+        'font-normal',
       )}>
+        <span 
+        className={classNames(
+          'font-bold',
+          'text-sm',
+          'text-blue-300',
+        )}>
+          우리집 필수품 공구의 모든 것
+        </span>
         {/* 텍스트 내부 컨테이너 */}
         <Text
           h1
@@ -37,8 +46,7 @@ export default function Home() {
         <Text
           span
           className={classNames(
-            'text-gray-600',
-            'font-light'
+            'text-gray-500',
           )}
         >
           다가오는 봄, 서흥공구 제품과 함께 산뜻하게 시작해 보세요 😄
@@ -47,9 +55,7 @@ export default function Home() {
         <Image
           className={classNames(
             'rounded-full',
-
-            'shadow-xl',
-            'shadow-gray-500',
+            
           )}
           src="/images/company.png"
           alt="company img"

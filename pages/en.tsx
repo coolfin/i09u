@@ -26,6 +26,7 @@ export default function Home() {
         'justify-center',
       )}>
         {/* 텍스트 내부 컨테이너 */}
+
         <Text
           h1
           className={classNames(
@@ -43,27 +44,18 @@ export default function Home() {
           In the upcoming spring, start fresh with Seoheung 😄
         </Text>
       </div>
-      {/* <div
-        className={classNames(
-          'w-1/3',
-          'flex',
-          'items-center',
-          'justify-center',
-          'bg-gray-100',
-          'py-28',
-          'rounded-full',
-        )}> */}
       <Image
         className={classNames(
           'rounded-full',
-          'py-12'
+          'shadow-xl',
+          'shadow-gray-500',
         )}
         src="/images/company.png"
         alt="company img"
         width={500}
         height={150}
       />
-      {/* </div> */}
+
 
     </Container >
   )

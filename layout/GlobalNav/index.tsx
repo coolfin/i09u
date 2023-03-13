@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 
 import { Container as BaseContainer } from '@/components/Container';
 import { ForienToggle } from '@/components/Toggle';
+import Image from 'next/image';
 
 export const GlobalNav = () => {
     const router = useRouter();
@@ -41,7 +42,9 @@ export const GlobalNav = () => {
                             'text-white',
                             'font-bold',
                             'text-xl',
+                            'flex',
                         )}>
+                        <Image src='/images/logo.png' width={50} height={50} alt={'로고'}/>
 
                         {router.pathname === '/en' ? 'Seoheung' : '서흥공구'}
                     </Link>
