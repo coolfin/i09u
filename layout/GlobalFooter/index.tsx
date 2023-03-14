@@ -12,7 +12,6 @@ export const GlobalFooter = () => {
 
         'gap-y-4',
         'text-gray-300',
-
         'text-xs',
 
         'mt-28'

@@ -1,8 +1,8 @@
 export type FactoryType = {
-    name : string,
-    eng_name : string,
-    origin? : string,
-}
+  name: string;
+  eng_name: string;
+  path: string;
+};
 
 // export type PlayerType = {
 //     name: string
