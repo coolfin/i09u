@@ -10,7 +10,7 @@ export const Logo = () => {
   
   useEffect(() => {
 
-    setIsEng(router.pathname === '/en' ? '/en' : '/')
+    setIsEng(router.pathname.slice(0,3) === '/en' ? '/en' : '/')
   }, [router.pathname])
 
   return (
@@ -24,7 +24,7 @@ export const Logo = () => {
       )}>
       <Image src='/images/logo.png' width={50} height={50} alt={'로고'} />
 
-      {router.pathname === '/en' ? 'Seoheung' : '서흥공구'}
+      {iseng === '/en' ? 'Seoheung' : '서흥공구'}
     </Link>
   )
 }

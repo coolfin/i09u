@@ -13,12 +13,13 @@ import { Logo } from './Logo';
 export const GlobalNav = () => {
     const router = useRouter();
     const [activeTab, setActiveTab] = useState<string>(router.pathname);
-    const [iseng, setIsEng] = useState('/');
+
+    const [iseng, setIsEng] = useState(false);
 
     useEffect(() => {
         setActiveTab(router.pathname)
-
-        setIsEng(router.pathname==='/en' ? '/en' : '/')
+        setIsEng(router.pathname.slice(0,3) === '/en' ? true : false)
+        console.log('url:',activeTab.slice(4))
     }, [router.pathname])
 
     return (
@@ -37,11 +38,11 @@ export const GlobalNav = () => {
                     'items-center',
                     'gap-x-3'
                 )}>
-                    <Logo/>
+                    <Logo />
                 </div>
 
                 <Tabs
-                    value={activeTab}
+                    value={iseng && router.pathname !== '/en' ? activeTab.slice(4,) : activeTab}
                     hideDivider
 
                     className={classNames(
@@ -49,15 +50,15 @@ export const GlobalNav = () => {
                         'flex',
                     )}
                     onChange={(v) => {
-                        router.push(v)
+                        { iseng ? router.push('/eng' + v) : router.push(v) }
                     }}>
-                    <Tabs.Item label={router.pathname === '/en' ? 'About' : "회사소개"} value='/info' />
-                    <Tabs.Item label={router.pathname === '/en' ? 'Cooperate' : "협력업체"} value='/together' />
-                    <Tabs.Item label={router.pathname === '/en' ? 'Help' : "고객센터"} value='/help' />
-                    <Tabs.Item label={router.pathname === '/en' ? 'People' : "사원"} value='/people' />
+                    <Tabs.Item label={iseng ? 'About' : "회사소개"} value='/info' />
+                    <Tabs.Item label={iseng ? 'Cooperate' : "협력업체"} value='/together' />
+                    <Tabs.Item label={iseng ? 'Help' : "고객센터"} value='/help' />
+                    <Tabs.Item label={iseng ? 'People' : "사원"} value='/people' />
                 </Tabs>
 
-                {(router.pathname === '/en' || router.pathname === '/') && <ForienToggle />}
+                <ForienToggle />
             </div>
 
         </BaseContainer>

@@ -13,15 +13,15 @@ export const ForienToggle = () => {
                 'items-center',
                 'font-extralight',
             )}>
-            <div className={classNames({'opacity-40' : router.pathname ==='/en'}, 'mx-3')}>kr</div>
+            <div className={classNames({'opacity-40' : router.pathname.slice(0,3) ==='/en'}, 'mx-3')}>kr</div>
             <Toggle 
             type="secondary"
-            initialChecked = {router.pathname === "/en" ? true : false}
+            initialChecked = {router.pathname.slice(-3) === "/en" ? true : false}
             onChange={(e) => {
                 e.preventDefault();
-                {e.target.checked ? router.push('/en') : router.back()}
+                {e.target.checked ? router.push(router.pathname !== '/' ? '/eng'+router.pathname : '/en') : router.back()}
             }} />
-            <div className={classNames({'opacity-40' : router.pathname ==='/'}, 'mx-3')}>en</div>
+            <div className={classNames({'opacity-40' : router.pathname.slice(0,3) !== '/en'}, 'mx-3')}>en</div>
         </label>
     )
 }
