@@ -10,6 +10,8 @@ import styled from '@emotion/styled';
 
 //처음 라우팅 안됐을 때 보여줄 페이지
 export default function Home() {
+  //넥스트 라우터
+
   return (
     <BaseContainer
       className={classNames(
@@ -56,6 +58,8 @@ export default function Home() {
       <div
         className={classNames(
           'max-w-full w-fit',
+          'p-24',
+          'box-border',
           //image css
           'bg-[url("/images/back.png")]',
           'bg-center',
@@ -64,10 +68,15 @@ export default function Home() {
         )}
       >
         <Image
-          className={classNames('rounded-full', 'opacity-50', 'z-10')}
+          className={classNames(
+            'rounded-full', 
+            'z-10',
+            'shadow-2xl',
+            'stroke-blue-500',
+            )}
           src="/images/company.png"
           alt="company img"
-          width={500}
+          width={400}
           height={10}
         />
       </div>
