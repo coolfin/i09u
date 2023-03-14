@@ -28,7 +28,7 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
         <meta name='viewport' content='width = device-width, initial-scale = 1.0' />
 
         <title>서흥공구</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/images/logo.png" />
 
         <meta name='author' content='박 상우' />
         <meta name='title' content='서흥공구' />

@@ -24,7 +24,7 @@ export const Logo = () => {
       )}>
       <Image src='/images/logo.png' width={50} height={50} alt={'로고'} />
 
-      {iseng === '/en' ? 'Seoheung' : '서흥공구'}
+      {iseng  === '/en' ? 'Seoheung' : '서흥공구'}
     </Link>
   )
 }

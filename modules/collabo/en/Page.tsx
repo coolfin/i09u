@@ -1,6 +1,10 @@
+import { Container } from "@/components/Container"
+
 export const Page = () => {
     return (
-      <div>협력업체 eng Page</div>
+      <Container>
+        test
+      </Container>
     )
   }
   
