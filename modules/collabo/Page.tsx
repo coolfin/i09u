@@ -23,7 +23,7 @@ export const Page = () => {
               'border-gray-400',
               'rounded-md',
 
-              'p-4',
+              'px-4',
               //flex
               'flex',
               'flex-col',
@@ -36,21 +36,29 @@ export const Page = () => {
               window.open('https://www.bosch.com/', '_blank');
             }}
           >
-            <Image
+            <div
               className={classNames(
-                'w-1/2',
-                'bg-cover',
-                'm-10',
+                'w-full',
+                'aspect-square',
+                'bg-contain',
+                'bg-origin-content',
+                'bg-no-repeat',
+                'bg-center',
+
+                //ANIM
+                'border-box',
+                'p-10',
+
                 'hover:transform',
                 'hover:scale-110',
                 'transition-all',
                 'duration-300'
               )}
-              src={'/images/company_logo/bosch.png'}
-              alt={'bosch'}
-              width={100}
-              height={100}
+              style={{
+                backgroundImage: `url('/images/company_logo/bosch.png')`,
+              }}
             />
+
             <div
               className={classNames(
                 'w-full',

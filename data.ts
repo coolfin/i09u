@@ -6,4 +6,10 @@ export const factories: FactoryType[] = [
     eng_name: 'BOSCH',
     path: './@/images/company_logo/bosch.png',
   },
+
+  {
+    name: '와이지',
+    eng_name: 'YG',
+    path: './@/images/company_logo/yg.png',
+  },
 ];
