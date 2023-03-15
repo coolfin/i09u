@@ -3,13 +3,15 @@ import classNames from 'classnames';
 import { useEffect, useMemo } from 'react';
 
 import { people } from '@/data';
-import { PeopleType } from '@/@types/entity'
+import { PeopleType } from '@/@types/entity';
+import { Mail } from '@geist-ui/icons';
+import Image from 'next/image';
 
 export const Page = () => {
   const rawPeople = useMemo<PeopleType[]>(() => people, []);
 
   useEffect(() => {
-    console.log(people)
+    console.log(people);
   }, []);
 
   return (
@@ -23,83 +25,138 @@ export const Page = () => {
             'lg:grid-cols-4',
 
             'gap-x-4',
-            'gap-y-8',
-
-
-            'bg-red-100',
+            'gap-y-8'
           )}
         >
           {rawPeople.map((val, index) => (
             <div
               key={index}
               className={classNames(
-                'bg-slate-400',
                 'px-4',
                 //flex
                 'flex',
                 'flex-col',
                 'justify-center',
-                'items-center',
-
+                'items-center'
               )}
             >
               <div
                 className={classNames(
                   'w-full',
                   'aspect-square',
-                  //ANIM
                   'px-4',
-
                   'gap-y-2',
 
                   'flex',
                   'flex-col',
                   'justify-between',
-                  'items-center',
+                  'items-center'
                 )}
-              // style={{
-              //   backgroundImage: `url(${val['path']})`,
-              // }}
+                // style={{
+                //   backgroundImage: `url(${val['path']})`,
+                // }}
               >
+                <div
+                  className={classNames(
+                    'w-full',
+                    'aspect-square',
 
-                <div className={classNames(
-                  'w-full',
-                  'aspect-square',
-                  'bg-red-400',
-                )}>이미지</div>
-                <div className={classNames(
-                  'w-full',
-                  'flex',
-                  'flex-col',
-                  'justify-center',
-                  'items-center',
+                    'border',
+                    'rounded-md',
 
-                  'font-bold',
-                  'text-cyan-800',
-                  'text-lg',
-                )}>{val['eng_name']} <span className={classNames('font-light', 'text-sm')}>{val['job']}</span></div>
-              </div>
-              <div
-                className={classNames( //우측에 아이콘 (메일, 전화) 
-                  'w-full',
+                    'flex',
+                    'justify-center',
+                    'items-end',
+                    'p-2'
+                  )}
+                  style={{
+                    backgroundImage: `url(${val['url']})`,
+                  }}
+                >
+                  <div
+                    className={classNames(
+                      'w-10',
+                      'p-2',
+                      'border-box',
+                      'border',
 
-                  'text-center',
-                  'text-sm',
-                  'px-4',
+                      'rounded-md',
+                      'bg-white',
 
-                  'flex',
-                  'justifty-between',
-                  'items-center',
-                )}
-              >
-                <div>
+                      'aspect-square',
 
-                {val['eng_name']}
+                      'mr-2',
+
+                      'bg-contain',
+                      'bg-origin-content',
+                      'bg-no-repeat',
+                      'bg-center',
+
+                      'flex',
+                      'items-end',
+
+                      'hover:cursor-pointer'
+                    )}
+                    style={{
+                      backgroundImage: `url('/images/icon/mail-48.png')`,
+                    }}
+                    onClick={() => {
+                      alert('메일 보내기로 이동합니다.');
+                      window.open(`mailto:${val['email']}`);
+                    }}
+                  />
+                  <div
+                    className={classNames(
+                      'w-10',
+                      'p-2',
+                      'border-box',
+                      'border',
+
+                      'rounded-md',
+                      'bg-white',
+
+                      'aspect-square',
+
+                      'bg-contain',
+                      'bg-origin-content',
+                      'bg-no-repeat',
+                      'bg-center',
+
+                      'flex',
+                      'items-end',
+
+                      'hover:cursor-pointer'
+                    )}
+                    style={{
+                      backgroundImage: `url('/images/icon/call-50.png')`,
+                    }}
+                    onClick={() => {
+                      alert('전화 걸기로 이동합니다.');
+                      window.open(`tel:${val['phone']}`);
+                    }}
+                  />
+                </div>
+                <div
+                  className={classNames(
+                    'w-full',
+                    'flex',
+                    'flex-col',
+                    'justify-center',
+                    'items-center',
+
+                    'font-bold',
+                    'text-white',
+                    'text-lg'
+                  )}
+                >
+                  {val['eng_name']}{' '}
+                  <span className={classNames('font-light', 'text-sm')}>
+                    {val['job']}
+                  </span>
                 </div>
               </div>
             </div>
           ))}
-
         </div>
       </div>
     </Container>

@@ -2,12 +2,10 @@ import { Tabs } from '@geist-ui/core';
 import classNames from 'classnames';
 
 import { useRouter } from 'next/router';
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 import { Container as BaseContainer } from '@/components/Container';
 import { ForienToggle } from '@/components/Toggle';
-import Image from 'next/image';
 import { Logo } from './Logo';
 
 export const GlobalNav = () => {

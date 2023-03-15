@@ -30,23 +30,26 @@ export const factories: FactoryType[] = [
     url: 'https://kr.stanleytools.global/ko-KR',
   },
   {
-    name: '스탠리(Stanley)',
-    eng_name: 'Stanley(스탠리)',
-    path: '/images/company_logo/stanley.png',
-    url: 'https://kr.stanleytools.global/ko-KR',
+    name: '보쉬(BOSCH)',
+    eng_name: 'BOSCH(보쉬)',
+    path: '/images/company_logo/bosch.png',
+    url: 'https://www.bosch.co.kr/',
   },
+
   {
-    name: '스탠리(Stanley)',
-    eng_name: 'Stanley(스탠리)',
-    path: '/images/company_logo/stanley.png',
-    url: 'https://kr.stanleytools.global/ko-KR',
+    name: '와이지(YG)',
+    eng_name: 'YG(와이지)',
+    path: '/images/company_logo/yg.png',
+    url: 'https://www.yg1.kr/kor/main.asp',
   },
+
   {
-    name: '스탠리(Stanley)',
-    eng_name: 'Stanley(스탠리)',
-    path: '/images/company_logo/stanley.png',
-    url: 'https://kr.stanleytools.global/ko-KR',
+    name: '마키타(Makita)',
+    eng_name: 'Makita(마키타)',
+    path: '/images/company_logo/makita.png',
+    url: 'https://www.lkmakita.co.kr/main.html',
   },
+
   {
     name: '스탠리(Stanley)',
     eng_name: 'Stanley(스탠리)',
@@ -57,23 +60,23 @@ export const factories: FactoryType[] = [
 
 export const people: PeopleType[] = [
   {
-    name: '박상우',
-    eng_name: 'Sangwoo Park',
+    name: '박근성',
+    eng_name: 'Geunsung Park',
     job: 'CEO',
+  },
+  {
+    name: '김미란',
+    eng_name: 'Miran Kim',
+    job: 'Director',
   },
   {
     name: '박상우',
     eng_name: 'Sangwoo Park',
-    job: 'CEO',
+    job: 'CTO',
   },
   {
-    name: '박상우',
-    eng_name: 'Sangwoo Park',
-    job: 'CEO',
-  },
-  {
-    name: '박상우',
-    eng_name: 'Sangwoo Park',
-    job: 'CEO',
+    name: '박아연',
+    eng_name: 'Ayeon Park',
+    job: 'Intern',
   },
 ];

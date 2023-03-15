@@ -11,6 +11,7 @@ export type PeopleType = {
   job: string;
   email?: string;
   phone?: string;
+  url?: string;
 };
 
 // export type PlayerType = {

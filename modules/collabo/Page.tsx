@@ -4,9 +4,11 @@ import Image from 'next/image';
 import { useEffect, useMemo } from 'react';
 
 import { factories } from '@/data';
-import { FactoryType } from '@/@types/entity'
+import { FactoryType } from '@/@types/entity';
+import { useRouter } from 'next/router';
 
 export const Page = () => {
+  const router = useRouter();
   const rawFactory = useMemo<FactoryType[]>(() => factories, []);
 
   useEffect(() => {
@@ -45,7 +47,11 @@ export const Page = () => {
                 'hover:cursor-pointer'
               )}
               onClick={() => {
-                { val['url'] ? window.open(val['url'], '_blank') : alert('연결 돼 있는 링크가 없습니다.') }
+                {
+                  val['url']
+                    ? window.open(val['url'], '_blank')
+                    : alert('No link is connected.');
+                }
               }}
             >
               <div
@@ -87,7 +93,6 @@ export const Page = () => {
               </div>
             </div>
           ))}
-
         </div>
       </div>
     </Container>
