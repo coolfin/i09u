@@ -2,6 +2,7 @@ export type FactoryType = {
   name: string;
   eng_name: string;
   path: string;
+  url?: string;
 };
 
 // export type PlayerType = {

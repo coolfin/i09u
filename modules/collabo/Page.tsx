@@ -1,8 +1,20 @@
 import { Container } from '@/components/Container';
 import classNames from 'classnames';
 import Image from 'next/image';
+import { useEffect, useMemo } from 'react';
+
+import { factories } from '@/data';
+import { FactoryType } from '@/@types/entity'
+import { useRouter } from 'next/router';
 
 export const Page = () => {
+  const router = useRouter();
+  const rawFactory = useMemo<FactoryType[]>(() => factories, []);
+
+  useEffect(() => {
+    console.log(rawFactory[0]['path']);
+  }, []);
+
   return (
     <Container>
       <div className={classNames('p-10')}>
@@ -17,62 +29,67 @@ export const Page = () => {
             'gap-y-8'
           )}
         >
-          <div
-            className={classNames(
-              'border',
-              'border-gray-400',
-              'rounded-md',
-
-              'px-4',
-              //flex
-              'flex',
-              'flex-col',
-              'justify-center',
-              'items-center',
-
-              'hover:cursor-pointer'
-            )}
-            onClick={() => {
-              window.open('https://www.bosch.com/', '_blank');
-            }}
-          >
+          {rawFactory.map((val, index) => (
             <div
+              key={index}
               className={classNames(
-                'w-full',
-                'aspect-square',
-                'bg-contain',
-                'bg-origin-content',
-                'bg-no-repeat',
-                'bg-center',
+                'border',
+                'border-gray-400',
+                'rounded-md',
 
-                //ANIM
-                'border-box',
-                'p-10',
+                'px-4',
+                //flex
+                'flex',
+                'flex-col',
+                'justify-center',
+                'items-center',
 
-                'hover:transform',
-                'hover:scale-110',
-                'transition-all',
-                'duration-300'
+                'hover:cursor-pointer'
               )}
-              style={{
-                backgroundImage: `url('/images/company_logo/bosch.png')`,
+              onClick={() => {
+                { val['url'] ? window.open(val['url'], '_blank') : alert('연결 돼 있는 링크가 없습니다.') }
               }}
-            />
-
-            <div
-              className={classNames(
-                'w-full',
-                'border-t',
-
-                'text-center',
-                'text-sm',
-                'font-light',
-                'py-4'
-              )}
             >
-              BOSCH (보쉬)
+              <div
+                className={classNames(
+                  'w-full',
+                  'aspect-square',
+
+                  'bg-contain',
+                  'bg-origin-content',
+                  'bg-no-repeat',
+                  'bg-center',
+
+                  //ANIM
+                  'border-box',
+                  'p-14',
+
+                  'hover:transform',
+                  'hover:scale-110',
+                  'hover:opacity-80',
+                  'transition-all',
+                  'duration-300'
+                )}
+                style={{
+                  backgroundImage: `url(${val['path']})`,
+                }}
+              />
+
+              <div
+                className={classNames(
+                  'w-full',
+                  'border-t',
+
+                  'text-center',
+                  'text-sm',
+                  'py-4'
+                )}
+              >
+                {val['name']}
+              </div>
             </div>
-          </div>
+          ))}
+
         </div>
       </div>
     </Container>
