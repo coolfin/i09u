@@ -5,10 +5,8 @@ import { useEffect, useMemo } from 'react';
 
 import { factories } from '@/data';
 import { FactoryType } from '@/@types/entity'
-import { useRouter } from 'next/router';
 
 export const Page = () => {
-  const router = useRouter();
   const rawFactory = useMemo<FactoryType[]>(() => factories, []);
 
   useEffect(() => {

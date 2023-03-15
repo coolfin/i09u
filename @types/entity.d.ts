@@ -5,6 +5,14 @@ export type FactoryType = {
   url?: string;
 };
 
+export type PeopleType = {
+  name: string;
+  eng_name: string;
+  job: string;
+  email?: string;
+  phone?: string;
+};
+
 // export type PlayerType = {
 //     name: string
 //     afreecaId: string
