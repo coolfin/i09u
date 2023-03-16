@@ -63,20 +63,24 @@ export const people: PeopleType[] = [
     name: '박근성',
     eng_name: 'Geunsung Park',
     job: 'CEO',
+    url: '/images/icon/people1.png',
   },
   {
     name: '김미란',
     eng_name: 'Miran Kim',
     job: 'Director',
+    url: '/images/icon/people2.png',
   },
   {
     name: '박상우',
     eng_name: 'Sangwoo Park',
     job: 'CTO',
+    url: '/images/icon/people1.png',
   },
   {
     name: '박아연',
     eng_name: 'Ayeon Park',
     job: 'Intern',
+    url: '/images/icon/people3.png',
   },
 ];

@@ -24,8 +24,8 @@ export const Page = () => {
             'md:grid-cols-2',
             'lg:grid-cols-4',
 
-            'gap-x-4',
-            'gap-y-8'
+            'gap-x-2',
+            'gap-y-4'
           )}
         >
           {rawPeople.map((val, index) => (
@@ -49,31 +49,50 @@ export const Page = () => {
 
                   'flex',
                   'flex-col',
-                  'justify-between',
+                  'justify-center',
                   'items-center'
                 )}
-                // style={{
-                //   backgroundImage: `url(${val['path']})`,
-                // }}
+              // style={{
+              //   backgroundImage: `url(${val['path']})`,
+              // }}
               >
                 <div
                   className={classNames(
                     'w-full',
-                    'aspect-square',
-
-                    'border',
-                    'rounded-md',
+                    'border-box',
+                    'p-4',
 
                     'flex',
                     'justify-center',
-                    'items-end',
-                    'p-2'
+                    'items-center',
                   )}
-                  style={{
-                    backgroundImage: `url(${val['url']})`,
-                  }}
                 >
-                  <div
+                  <div className={classNames(
+                    'w-full', 
+                    'aspect-square',
+                    'rounded-full',
+
+                    'border-8',
+                    'border-white',
+                    'border-double',
+ 
+                    'bg-contain',
+                    'bg-origin-content',
+                    'bg-no-repeat',
+                    'bg-center',
+                    
+                    'hover:cursor-pointer',
+                    'hover:opacity-80',)}
+                    
+                    onClick={() => {
+                      alert('메일 보내기로 이동합니다.');
+                      window.open(`mailto:${val['email']}`);
+                    }}
+                    style={{
+                      backgroundImage: `url('${val['url']}')`,
+                    }}
+                    />
+                  {/* <div
                     className={classNames(
                       'w-10',
                       'p-2',
@@ -95,10 +114,11 @@ export const Page = () => {
                       'flex',
                       'items-end',
 
-                      'hover:cursor-pointer'
+                      'hover:cursor-pointer',
+                      'hover:opacity-50',
                     )}
                     style={{
-                      backgroundImage: `url('/images/icon/mail-48.png')`,
+                      backgroundImage: `url('/images/icon/call-50.png')`,
                     }}
                     onClick={() => {
                       alert('메일 보내기로 이동합니다.');
@@ -125,7 +145,8 @@ export const Page = () => {
                       'flex',
                       'items-end',
 
-                      'hover:cursor-pointer'
+                      'hover:cursor-pointer',
+                      'hover:opacity-50',
                     )}
                     style={{
                       backgroundImage: `url('/images/icon/call-50.png')`,
@@ -134,7 +155,7 @@ export const Page = () => {
                       alert('전화 걸기로 이동합니다.');
                       window.open(`tel:${val['phone']}`);
                     }}
-                  />
+                  /> */}
                 </div>
                 <div
                   className={classNames(
