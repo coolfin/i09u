@@ -1,5 +1,6 @@
 import { FactoryType } from './@types/entity.d';
 import { PeopleType } from './@types/entity.d';
+import { HistoryType } from './@types/entity.d';
 
 export const factories: FactoryType[] = [
   {
@@ -82,5 +83,31 @@ export const people: PeopleType[] = [
     eng_name: 'Ayeon Park',
     job: 'Intern',
     url: '/images/icon/people3.png',
+  },
+];
+
+export const histories: HistoryType[] = [
+  {
+    year: '2020',
+    title: '테스트',
+  },
+  {
+    year: '2021',
+    title: '테스트',
+  },
+
+  {
+    year: '2021',
+    title: '테스트',
+  },
+
+  {
+    year: '2021',
+    title: '테스트',
+  },
+
+  {
+    year: '2021',
+    title: '테스트',
   },
 ];

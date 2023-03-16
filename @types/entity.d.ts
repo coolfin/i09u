@@ -14,6 +14,11 @@ export type PeopleType = {
   url?: string;
 };
 
+export type HistoryType = {
+  year: string;
+  title: string;
+};
+
 // export type PlayerType = {
 //     name: string
 //     afreecaId: string

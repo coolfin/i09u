@@ -4,8 +4,6 @@ import { useEffect, useMemo } from 'react';
 
 import { people } from '@/data';
 import { PeopleType } from '@/@types/entity';
-import { Mail } from '@geist-ui/icons';
-import Image from 'next/image';
 
 export const Page = () => {
   const rawPeople = useMemo<PeopleType[]>(() => people, []);
