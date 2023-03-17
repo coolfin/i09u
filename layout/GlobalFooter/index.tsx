@@ -14,7 +14,8 @@ export const GlobalFooter = () => {
         'text-gray-300',
         'text-xs',
 
-        'mt-28'
+        'mt-24',
+        'mb-4',
       )}
     >
       <h5 className={classNames('text-white')}>서흥공구.com</h5>
