@@ -70,6 +70,7 @@ export const Page = () => {
           }} />
           <div className={classNames(
             'w-1/2',
+            'max-sm:w-3/4',
 
             'flex',
             'flex-col',
@@ -203,7 +204,7 @@ export const Page = () => {
 
             'gap-y-2',
           )}>
-          <span className={classNames('text-4xl', 'font-extrabold')}>오시는 길</span>
+          <span className={classNames('text-4xl', 'font-extrabold', 'max-sm:text-2xl')}>오시는 길</span>
           <span className={classNames('text-sm', 'text-gray-300', 'mb-4')}>경기 화성시 장안면 3.1만세로 457 1층 457</span>
           <span className={classNames('text-gray-200', 'font-light', 'text-sm')}>📞 031 ) 351 - 5509</span>
           <span className={classNames('text-gray-200', 'font-light', 'text-sm')}>📠 031 ) 351 - 1509</span>

@@ -27,7 +27,7 @@ export const Page = () => {
             'gap-x-2',
             'gap-y-4',
 
-            'max-sm:p-20',
+            'max-sm:p-10',
           )}
         >
           {rawPeople.map((val, index) => (

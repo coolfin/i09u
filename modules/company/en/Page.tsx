@@ -70,6 +70,7 @@ export const Page = () => {
           }} />
           <div className={classNames(
             'w-1/2',
+            'max-sm:w-3/4',
 
             'flex',
             'flex-col',
@@ -205,7 +206,7 @@ export const Page = () => {
 
             'gap-y-2',
           )}>
-          <span className={classNames('text-4xl', 'font-extrabold')}>Directions</span>
+          <span className={classNames('text-4xl', 'font-extrabold', 'max-sm:text-2xl')}>Directions</span>
           <span className={classNames('text-sm', 'text-gray-300', 'mb-4')}>457, Manse-ro, Jangan-myeon, Hwaseong-si, Gyeonggi-do</span>
           <span className={classNames('text-gray-200', 'font-light', 'text-sm')}>📞 (+82) 031 ) 351 - 5509</span>
           <span className={classNames('text-gray-200', 'font-light', 'text-sm')}>📠 (+82) 031 ) 351 - 1509</span>

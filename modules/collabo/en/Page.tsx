@@ -29,7 +29,7 @@ export const Page = () => {
             'gap-y-8',
 
 
-            'max-sm:p-20',
+            'max-sm:p-10',
           )}
         >
           {rawFactory.map((val, index) => (
