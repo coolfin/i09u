@@ -7,6 +7,7 @@ import { histories } from '@/data';
 import { Logo } from "@/layout/GlobalNav/Logo";
 import { Button } from "@geist-ui/core";
 import { ArrowRight } from "@geist-ui/icons";
+import Link from "next/link";
 
 export const Page = () => {
   const rawHistory = useMemo(() => histories, []);
@@ -36,10 +37,14 @@ export const Page = () => {
           'justify-around',
           'items-center',
 
-          'pt-20',
+          'mt-20',
+
+          'border-y',
+          'border-gray-400',
+          'py-10',
 
           'max-sm:gap-y-4',
-          )}>
+        )}>
           <div className={classNames(
             'w-1/3',
             'aspect-square',
@@ -49,10 +54,18 @@ export const Page = () => {
             'border-8',
             'border-double',
 
+            'bg-cover',
+            'bg-no-repeat',
+            'bg-center',
 
-            'p-32',
+            'hover:opacity-90',
+            'hover:cursor-pointer',
+
+
+            'p-16',
+            'my-16'
           )} style={{
-            backgroundImage: `url('/images/company_logo/bosch.png')`
+            backgroundImage: `url('/images/parent.jpeg')`
           }} />
           <div className={classNames(
             'w-1/2',
@@ -131,24 +144,46 @@ export const Page = () => {
 
         {/*유튜브 */}
         <div className={classNames(
-          'w-fit',
+          'w-full',
 
           'flex',
-          'flex-col',
-          'justify-start',
-          'gap-y-2',
-          
+          'justify-around',
+          'items-center',
+
+          'gap-x-8',
+
+          'border-y',
+          'border-gray-400',
+          'py-10',
+
+          'max-sm:flex-col',
+          'max-sm:gap-y-10',
         )}>
-            <div>Join Our Youtube</div>
+          <div className={classNames(
+            'w-fit',
+
+            'flex',
+            'flex-col',
+            'justify-start',
+            'gap-y-4',
+          )}>
+
+            <h2>Join Our Youtube</h2>
             <div>서흥공구의 일상을 함께해 보세요</div>
-            <Button icon={<ArrowRight />} width={1.5} iconRight>
-              유튜브 바로가기
-            </Button>
+            <Link href='https://www.youtube.com/@TV-vh5ow' target="_blank">
+              <Button icon={<ArrowRight />} width={1.5} iconRight>
+                유튜브 바로가기
+              </Button>
+            </Link>
+          </div>
+          <div>
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/20sk09BmWtc?start=9" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" />
+          </div>
         </div>
 
         <div>
-          <div>오시는 길</div> 
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3182.09822566783!2d126.85096671558297!3d37.10277925830762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b111457b080b5%3A0x801c64338cd4e887!2z7ISc7Z2l6rO16rWs!5e0!3m2!1sen!2sus!4v1678943882245!5m2!1sen!2sus" width="50%" height="100%"  loading="lazy" />
+          <div>오시는 길</div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3182.09822566783!2d126.85096671558297!3d37.10277925830762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b111457b080b5%3A0x801c64338cd4e887!2z7ISc7Z2l6rO16rWs!5e0!3m2!1sen!2sus!4v1678943882245!5m2!1sen!2sus" width="50%" height="100%" loading="lazy" />
         </div>
       </div>
 
