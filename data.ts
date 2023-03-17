@@ -90,24 +90,29 @@ export const histories: HistoryType[] = [
   {
     year: '2020',
     title: '테스트',
+    eng_title: 'Test',
   },
   {
     year: '2021',
     title: '테스트',
-  },
-
-  {
-    year: '2021',
-    title: '테스트',
+    eng_title: 'Test',
   },
 
   {
     year: '2021',
     title: '테스트',
+    eng_title: 'Test',
   },
 
   {
     year: '2021',
     title: '테스트',
+    eng_title: 'Test',
+  },
+
+  {
+    year: '2021',
+    title: '테스트',
+    eng_title: 'Test',
   },
 ];

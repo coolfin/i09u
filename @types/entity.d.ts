@@ -17,6 +17,7 @@ export type PeopleType = {
 export type HistoryType = {
   year: string;
   title: string;
+  eng_title: string;
 };
 
 // export type PlayerType = {

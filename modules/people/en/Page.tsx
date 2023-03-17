@@ -25,7 +25,9 @@ export const Page = () => {
             'lg:grid-cols-4',
 
             'gap-x-2',
-            'gap-y-4'
+            'gap-y-4',
+
+            'max-sm:p-20',
           )}
         >
           {rawPeople.map((val, index) => (

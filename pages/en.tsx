@@ -17,7 +17,7 @@ export default function Home() {
         'items-center',
         'justify-between',
 
-        'sm:flex-col',
+        'max-sm:flex-col',
         'md:flex-col',
         'lg:flex-row',
 
@@ -30,7 +30,11 @@ export default function Home() {
           'flex',
           'flex-col',
           'justify-center',
-          'font-normal'
+          'font-normal',
+
+          'max-sm:gap-y-2',
+          'max-sm:mb-5',
+          'max-sm:items-center',
         )}
       >
         {/* 텍스트 내부 컨테이너 */}
@@ -38,7 +42,7 @@ export default function Home() {
           Everything about our essentials tools
         </span>
 
-        <Text h1 className={classNames('font-bold')}>
+        <Text h1 className={classNames('font-bold', 'max-sm:text-3xl')}>
           Wellcome to Seoheung
         </Text>
 

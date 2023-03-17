@@ -32,14 +32,18 @@ export default function Home() {
           'flex',
           'flex-col',
           'justify-center',
-          'font-normal'
+          'font-normal',
+
+          'max-sm:gap-y-2',
+          'max-sm:mb-5',
+          'max-sm:items-center',
         )}
       >
         <span className={classNames('font-bold', 'text-sm', 'text-blue-300')}>
           우리집 필수품 공구의 모든 것
         </span>
         {/* 텍스트 내부 컨테이너 */}
-        <Text h1 className={classNames('font-bold')}>
+        <Text h1 className={classNames('font-bold' , 'max-sm:text-3xl')}>
           안녕하세요, 서흥공구입니다
         </Text>
 

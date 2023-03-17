@@ -26,7 +26,9 @@ export const Page = () => {
             'lg:grid-cols-4',
 
             'gap-x-4',
-            'gap-y-8'
+            'gap-y-8',
+
+            'max-sm:p-20',
           )}
         >
           {rawFactory.map((val, index) => (
