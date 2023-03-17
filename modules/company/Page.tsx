@@ -26,22 +26,23 @@ export const Page = () => {
         'justify-center',
         'items-center',
 
-        'gap-y-40',
+        'gap-y-20',
       )}>
         {/* 회사소개 */}
         <div className={classNames(
           'w-full',
+
+          'py-4',
+          'mt-20',
 
           'flex',
           'max-sm:flex-col',
           'justify-around',
           'items-center',
 
-          'mt-20',
 
           'border-y',
           'border-gray-400',
-          'py-10',
 
           'max-sm:gap-y-4',
         )}>
@@ -154,7 +155,7 @@ export const Page = () => {
 
           'border-y',
           'border-gray-400',
-          'py-10',
+          'py-20',
 
           'max-sm:flex-col',
           'max-sm:gap-y-10',
@@ -165,6 +166,7 @@ export const Page = () => {
             'flex',
             'flex-col',
             'justify-start',
+
             'gap-y-4',
           )}>
 
@@ -181,17 +183,49 @@ export const Page = () => {
           </div>
         </div>
 
-        <div>
-          <div>오시는 길</div>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3182.09822566783!2d126.85096671558297!3d37.10277925830762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b111457b080b5%3A0x801c64338cd4e887!2z7ISc7Z2l6rO16rWs!5e0!3m2!1sen!2sus!4v1678943882245!5m2!1sen!2sus" width="50%" height="100%" loading="lazy" />
+        <div className={classNames(
+          'w-full',
+
+          'flex',
+          'justify-center',
+          'items-center',
+
+          'max-sm:gap-y-8',
+        )}>
+          <div className={classNames(
+            'w-1/3',
+
+            'flex',
+            'flex-col',
+
+            'justify-center',
+            'items-center',
+
+            'gap-y-2',
+          )}>
+          <span className={classNames('text-4xl', 'font-extrabold')}>오시는 길</span>
+          <span className={classNames('text-sm', 'text-gray-300', 'mb-4')}>경기 화성시 장안면 3.1만세로 457 1층 457</span>
+          <span className={classNames('text-gray-200', 'font-light', 'text-sm')}>📞 031 ) 351 - 5509</span>
+          <span className={classNames('text-gray-200', 'font-light', 'text-sm')}>📠 031 ) 351 - 1509</span>
         </div>
+
+        <div className={classNames('aspect-square', 'w-1/2',
+        'flex',
+        'justify-center',
+        'items-center',
+        )}>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3182.09822566783!2d126.85096671558297!3d37.10277925830762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b111457b080b5%3A0x801c64338cd4e887!2z7ISc7Z2l6rO16rWs!5e0!3m2!1sen!2sus!4v1678943882245!5m2!1sen!2sus" width="70%" height="70%" loading="lazy" />
+
+        </div>
+
       </div>
+    </div>
 
       {/* <div className={classNames('bg-red-200', 'w-full', 'h-100')}>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3182.09822566783!2d126.85096671558297!3d37.10277925830762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b111457b080b5%3A0x801c64338cd4e887!2z7ISc7Z2l6rO16rWs!5e0!3m2!1sen!2sus!4v1678943882245!5m2!1sen!2sus" width="40%" height="100%"  loading="lazy" />
     </div> */}
 
-    </Container>
+    </Container >
   )
 }
 
