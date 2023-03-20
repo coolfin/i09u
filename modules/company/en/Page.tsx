@@ -101,19 +101,16 @@ export const Page = () => {
 
             //flex
             'flex',
-            'justify-between',
+            'justify-center',
             'items-center',
 
             'grid',
             'max-sm:grid-cols-1',
             'md:grid-cols-3',
-            'lg:grid-cols-5',
+            'lg:grid-cols-4',
 
             'p-8',
-          )}
-          style={{
-            maxWidth: '1248px'
-          }}>
+          )}>
           {rawHistory.map((val, index) => (
             <div
               key={index}
@@ -121,7 +118,6 @@ export const Page = () => {
                 'w-full',
                 'h-full',
                 'aspect-square',
-
                 'box-border',
                 'p-4',
 
@@ -130,11 +126,15 @@ export const Page = () => {
                 'justify-center',
                 'items-center',
 
+                'text-center',
+                'text-gray-300',
+
                 { 'lg:border-l-4': index !== 0 },
 
               )}>
               <h2 className={classNames(
                 'text-center',
+                'text-white',
               )}>
                 {val['year']}
               </h2>
