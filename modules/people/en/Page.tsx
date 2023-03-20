@@ -10,10 +10,6 @@ import Image from 'next/image';
 export const Page = () => {
   const rawPeople = useMemo<PeopleType[]>(() => people, []);
 
-  useEffect(() => {
-    console.log(people);
-  }, []);
-
   return (
     <Container>
       <div className={classNames('py-32')}>

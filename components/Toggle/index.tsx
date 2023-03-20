@@ -1,7 +1,6 @@
 import { Toggle } from "@geist-ui/core"
 import classNames from "classnames"
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
 
 export const ForienToggle = () => {
     const router = useRouter();

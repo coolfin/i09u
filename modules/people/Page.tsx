@@ -9,10 +9,6 @@ import { Badge } from '@geist-ui/core';
 export const Page = () => {
   const rawPeople = useMemo<PeopleType[]>(() => people, []);
 
-  useEffect(() => {
-    console.log(people);
-  }, []);
-
   return (
     <Container>
       <div className={classNames('py-32')}>

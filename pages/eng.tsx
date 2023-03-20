@@ -6,9 +6,7 @@ import { Button, Text } from '@geist-ui/core';
 import Image from 'next/image';
 import { ArrowRight } from '@geist-ui/icons';
 import Link from 'next/link';
-import styled from '@emotion/styled';
 
-//처음 라우팅 안됐을 때 보여줄 페이지
 export default function Home() {
   return (
     <Container

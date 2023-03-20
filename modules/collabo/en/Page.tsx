@@ -1,20 +1,11 @@
 import { Container } from '@/components/Container';
 import classNames from 'classnames';
-import Image from 'next/image';
-import { useEffect, useMemo } from 'react';
+import { useMemo } from 'react';
 
 import { factories } from '@/data';
 import { FactoryType } from '@/@types/entity'
-import { useRouter } from 'next/router';
-
 export const Page = () => {
-  const router = useRouter();
   const rawFactory = useMemo<FactoryType[]>(() => factories, []);
-
-  useEffect(() => {
-    console.log(rawFactory[0]['path']);
-  }, []);
-
   return (
     <Container>
       <div className={classNames('p-10')}>
