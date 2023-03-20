@@ -87,8 +87,8 @@ export const Page = () => {
             <span><strong className={classNames('font-bold', '')}>절삭공구 금형공구 전동공구 측정공구 에어공구 용접자재 포장잡자재(랩, 비닐, 테이프, 포장 끈 등)과 케미칼종류, 볼트 배관 에어닛플 전기자재 연마제품
               수공구 보루 장갑 등</strong> 매우 많은 품목을 취급중인 종합공구입니다.</span>
             <span>서흥공구의 장점은 한 곳에서 모두 구매할 수 있을 정도로 다양한 품목을 보유하고 있다는 것 입니다. 여러분의 시간을 절약해 드리겠습니다.</span>
-            <span>항상 웃자 - 먼저 웃자 라는 사훈을 기억하고 최선을 다하여 여러분의 발전에 기여하기 위해 노력하겠습니다.</span>
-            <span className='font-extrabold'>항상 감사합니다.</span>
+            <span>웃자, 먼저 웃자 라는 사훈을 기억하고 최선을 다하여 여러분의 발전에 기여하기 위해 노력하겠습니다.</span>
+            <span className='font-extrabold'>감사합니다</span>
           </div>
         </div>
         {/* 연혁 */}
