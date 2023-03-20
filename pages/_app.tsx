@@ -24,6 +24,8 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
         <meta name='og:title' content='서흥공구' />
         <meta name='description' content='서흥공구 회사의 소개 페이지입니다' />
         <meta name='og:description' content='서흥공구 회사의 소개 페이지입니다' />
+        
+        <meta name="naver-site-verification" content="cf4696058b5fad05486b70c7ad909332707e4080" />
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
 
       </Head>
