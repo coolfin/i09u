@@ -168,6 +168,12 @@ export const people: PeopleType[] = [
     job: 'Manager',
     url: '/images/icon/people3.png',
   },
+  {
+    name: '한재훈',
+    eng_name: 'JaeHoon Han',
+    job: 'Deliver',
+    url: '/images/icon/people1.png',
+  },
 ];
 
 

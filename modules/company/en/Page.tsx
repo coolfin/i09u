@@ -89,8 +89,8 @@ export const Page = () => {
             <span>
             The advantage of Seoheung is that it has a wide variety of items that can be purchased in one place. We'll save your time.
             </span>
-            <span>I will always remember the motto "Let's smile - Let's smile first" and try my best to contribute to your development.</span>
-            <span className='font-extrabold'>Thank you, always.</span>
+            <span>I will always remember the motto "Smile - Let's smile first" and try my best to contribute to your development.</span>
+            <span className='font-extrabold'>Thank you</span>
           </div>
         </div>
         {/* 연혁 */}
