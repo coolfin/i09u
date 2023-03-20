@@ -42,7 +42,7 @@ export default function Home() {
           Everything about our essentials tools
         </span>
 
-        <Text h1 className={classNames('font-bold', 'max-sm:text-3xl')}>
+        <Text h1 className={classNames('font-bold','font-black', 'max-sm:text-3xl')}>
           Wellcome to Seoheung
         </Text>
 

@@ -36,6 +36,7 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
         <meta name='description' content='서흥공구 회사의 소개 페이지입니다' />
         <meta name='og:description' content='서흥공구 회사의 소개 페이지입니다' />
         {/* <meta name='og:url' content='https://sh09.com' /> */}
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
 
       </Head>
       <GeistProvider themeType='dark'>

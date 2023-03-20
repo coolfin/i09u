@@ -170,33 +170,28 @@ export const people: PeopleType[] = [
   },
 ];
 
+
 export const histories: HistoryType[] = [
   {
-    year: '2020',
-    title: '테스트',
-    eng_title: 'Test',
+    year: '2005.02',
+    title: '서흥공구 개업',
+    eng_title: 'Seohyeong Tool Co., Ltd. was established',
   },
   {
-    year: '2021',
-    title: '테스트',
-    eng_title: 'Test',
-  },
-
-  {
-    year: '2021',
-    title: '테스트',
-    eng_title: 'Test',
+    year: '2013.02',
+    title: '사옥 확장이전',
+    eng_title: 'Moved to new office',
   },
 
   {
-    year: '2021',
-    title: '테스트',
-    eng_title: 'Test',
+    year: '2020.01',
+    title: '온라인 쇼핑몰(i09u) 확장',
+    eng_title: 'Online shopping mall(i09u) expansion',
   },
 
   {
-    year: '2021',
-    title: '테스트',
-    eng_title: 'Test',
+    year: '2023.01',
+    title: '공구여신 상표등록',
+    eng_title: 'Registered the trademark of "공구여신"',
   },
 ];

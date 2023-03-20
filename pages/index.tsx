@@ -43,7 +43,7 @@ export default function Home() {
           우리집 필수품 공구의 모든 것
         </span>
         {/* 텍스트 내부 컨테이너 */}
-        <Text h1 className={classNames('font-bold' , 'max-sm:text-3xl')}>
+        <Text h1 className={classNames('font-bold' ,'font-black' ,'max-sm:text-3xl')}>
           안녕하세요, 서흥공구입니다
         </Text>
 
