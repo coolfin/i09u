@@ -19,7 +19,7 @@ export const ForienToggle = () => {
             initialChecked = {router.pathname.slice(-3) === "/en" ? true : false}
             onChange={(e) => {
                 e.preventDefault();
-                {e.target.checked ? router.push(router.pathname !== '/' ? '/eng'+router.pathname : '/en') : router.back()}
+                {e.target.checked ? router.push("/eng"+router.pathname) : router.push(router.pathname.slice(4) ? router.pathname.slice(4) : "/")}
             }} />
             <div className={classNames({'opacity-40' : router.pathname.slice(0,3) !== '/en'}, 'mx-3')}>en</div>
         </label>

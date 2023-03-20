@@ -4,6 +4,7 @@ import { useEffect, useMemo } from 'react';
 
 import { people } from '@/data';
 import { PeopleType } from '@/@types/entity';
+import { Badge } from '@geist-ui/core';
 
 export const Page = () => {
   const rawPeople = useMemo<PeopleType[]>(() => people, []);
@@ -67,31 +68,32 @@ export const Page = () => {
                     'items-center',
                   )}
                 >
+
                   <div className={classNames(
-                    'w-full', 
+                    'w-full',
                     'aspect-square',
                     'rounded-full',
 
                     'border-8',
                     'border-white',
                     'border-double',
- 
+
                     'bg-contain',
                     'bg-origin-content',
                     'bg-no-repeat',
                     'bg-center',
-                    
+
                     'hover:cursor-pointer',
                     'hover:opacity-80',)}
-                    
-                    onClick={() => {
-                      alert('메일 보내기로 이동합니다.');
-                      window.open(`mailto:${val['email']}`);
-                    }}
+
+                    // onClick={() => {
+                    //   alert('메일 보내기로 이동합니다.');
+                    //   window.open(`mailto:${val['email']}`);
+                    // }}
                     style={{
                       backgroundImage: `url('${val['url']}')`,
                     }}
-                    />
+                  />
                   {/* <div
                     className={classNames(
                       'w-10',
@@ -170,7 +172,13 @@ export const Page = () => {
                     'text-lg'
                   )}
                 >
-                  {val['name']}{' '}
+                  <div>       {val['name']}    {index < 2 && <Badge type='success' className={classNames(
+                    'relative',
+                    'top-0',
+                    'right-0',
+                  )}>대표</Badge>}
+                  </div>
+
                   <span className={classNames('font-light', 'text-sm')}>
                     {val['job']}
                   </span>

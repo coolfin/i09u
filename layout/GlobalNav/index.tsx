@@ -17,6 +17,7 @@ export const GlobalNav = () => {
   useEffect(() => {
     setActiveTab(router.pathname);
     setIsEng(router.pathname.slice(0, 3) === '/en' ? true : false);
+    console.log(router.pathname);
   }, [router.pathname]);
 
   return (

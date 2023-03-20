@@ -35,11 +35,6 @@ export const Page = () => {
             <div
               key={index}
               className={classNames(
-                'border',
-                'border-gray-800',
-                'rounded-md',
-                'bg-gray-300',
-
                 'px-4',
                 //flex
                 'flex',
@@ -48,8 +43,6 @@ export const Page = () => {
                 'items-center',
 
                 'hover:cursor-pointer',
-
-                'text-gray-800',
               )}
               onClick={() => {
                 {
@@ -77,7 +70,10 @@ export const Page = () => {
                   'hover:scale-110',
                   'hover:opacity-80',
                   'transition-all',
-                  'duration-300'
+                  'duration-300',
+                  'rounded-full',
+
+                  'bg-gray-200',
                 )}
                 style={{
                   backgroundImage: `url(${val['path']})`,
@@ -87,10 +83,9 @@ export const Page = () => {
               <div
                 className={classNames(
                   'w-full',
-                  'border-t',
-                  'border-gray-800',
 
                   'text-center',
+                  'text-white',
                   'text-sm',
                   'py-4'
                 )}

@@ -86,10 +86,10 @@ export const Page = () => {
                     'hover:cursor-pointer',
                     'hover:opacity-80',)}
                     
-                    onClick={() => {
-                      alert('Go to send email.');
-                      window.open(`mailto:${val['email']}`);
-                    }}
+                    // onClick={() => {
+                    //   alert('Go to send email.');
+                    //   window.open(`mailto:${val['email']}`);
+                    // }}
                     style={{
                       backgroundImage: `url('${val['url']}')`,
                     }}
