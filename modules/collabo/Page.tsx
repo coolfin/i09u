@@ -36,8 +36,9 @@ export const Page = () => {
               key={index}
               className={classNames(
                 'border',
-                'border-gray-400',
+                'border-gray-800',
                 'rounded-md',
+                'bg-gray-300',
 
                 'px-4',
                 //flex
@@ -46,7 +47,9 @@ export const Page = () => {
                 'justify-center',
                 'items-center',
 
-                'hover:cursor-pointer'
+                'hover:cursor-pointer',
+
+                'text-gray-800',
               )}
               onClick={() => {
                 {
@@ -85,6 +88,7 @@ export const Page = () => {
                 className={classNames(
                   'w-full',
                   'border-t',
+                  'border-gray-800',
 
                   'text-center',
                   'text-sm',
