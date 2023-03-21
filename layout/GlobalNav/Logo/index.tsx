@@ -9,7 +9,7 @@ export const Logo = () => {
   const router = useRouter();
   
   useEffect(() => {
-    setIsEng(router.pathname.slice(0,3) === '/en' ? '/en' : '/')
+    setIsEng(router.pathname.slice(0,3) === '/en' ? '/eng' : '/')
   }, [router.pathname])
 
   return (
